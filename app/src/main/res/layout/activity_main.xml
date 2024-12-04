@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jokeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:padding="16dp"
+        android:textSize="18sp" />
+    <!-- 查找框（EditText） -->
+<!--    <EditText-->
+<!--        android:id="@+id/search_box"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:hint="Enter search query" />-->
+
+    <!-- 弹起时间选择器的按钮 -->
+    <LinearLayout
+        android:layout_below="@id/jokeTextView"
+        android:id="@+id/ll"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/time_picker_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Time" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/clean_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clean" />
+    </LinearLayout>
+
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll"
+        android:layout_marginTop="8dp" />
+
+    <!-- FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:onClick="add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginBottom="40dp"
+        app:backgroundTint="@android:color/background_light"
+        tools:visibility="visible" />
+
+</RelativeLayout>

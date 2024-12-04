@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.note">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplicationBase">
+        <activity
+            android:name="com.example.note.dongActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.note.LoginActivity"
+            android:exported="false"
+            android:label="登录" />
+        <activity
+            android:name="com.example.note.SigninActivity"
+            android:exported="false"
+            android:label="注册" />
+        <activity
+            android:name="com.example.note.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.note.EditActivity"
+            android:label="编辑记事" />
+        <activity
+            android:name="com.example.note.AddActivity"
+            android:label="添加记事"
+            android:parentActivityName="com.example.note.MainActivity" />
+        <activity
+            android:name="com.example.note.MainActivity"
+            android:label="记事列表"></activity>
+
+
+    </application>
+
+</manifest>
